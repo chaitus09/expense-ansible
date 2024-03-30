@@ -7,10 +7,7 @@
         name: nginx
         state: latest
 
-    - name: copy expense configuration
-      ansible.builtin.copy:
-          src: expense.conf
-          dest: /etc/nginx/default.d/expense.conf
+
 
                     # (Optional) Set to yes if src refers to a remote file
 
