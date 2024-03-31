@@ -13,6 +13,11 @@
   ansible.builtin.user:
     name: expense
 
+- name: import app pre requiste
+  ansible.builtin.import_role:
+    name: common
+    tasks_from: app-pre-rec
+
 - name: clean up the old content
   ansible.builtin.file:
     path: /app

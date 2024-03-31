@@ -7,21 +7,26 @@
     src: expense.conf
     dest: /etc/nginx/default.d/expense.conf
 
-- name: clean up the old content
-  ansible.builtin.file:
-    path: /usr/share/nginx/html
-    state: absent
+    name: import app pre requiste
+    ansible.builtin.import_role:
+      name: common
+      tasks_from: app-pre-rec
 
-- name: Create directory /usr/share/nginx/html
-  ansible.builtin.file:
-    path: /usr/share/nginx/html
-    state: directory
-
-- name: Download and extract the content
-  ansible.builtin.unarchive:
-    src: https://expense-artifacts.s3.amazonaws.com/frontend.zip   # Path to the source archive file on the target machine
-    dest: /usr/share/nginx/html         # Destination directory where the archive will be extracted
-    remote_src: yes                    # (Optional) Set to yes if src refers to a remote file
+#- name: clean up the old content
+#  ansible.builtin.file:
+#    path: /usr/share/nginx/html
+#    state: absent
+#
+#- name: Create directory /usr/share/nginx/html
+#  ansible.builtin.file:
+#    path: /usr/share/nginx/html
+#    state: directory
+#
+#- name: Download and extract the content
+#  ansible.builtin.unarchive:
+#    src: https://expense-artifacts.s3.amazonaws.com/frontend.zip   # Path to the source archive file on the target machine
+#    dest: /usr/share/nginx/html         # Destination directory where the archive will be extracted
+#    remote_src: yes                    # (Optional) Set to yes if src refers to a remote file
 
 
     # (Optional) Set to yes if src refers to a remote file
