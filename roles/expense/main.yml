@@ -1,0 +1,5 @@
+name : try with this for code DRY
+hosts:  all
+become: yes
+roles:
+  - "{{ role-name }}"
