@@ -29,7 +29,7 @@
 
 - name: print
   debug:
-    msg:"{{mysql_connection_output}}"
+    msg:"{{ mysql_connection_output }}"
 
 - name: setup MYSQL password
   ansible.builtin.shell: mysql_secure_installation --set-root-pass ExpenseApp@1
