@@ -25,7 +25,7 @@
     #mysql-dev.rdevops6a.online
     filter: version
   register: mysql_connection_output
-  ignore_errors: yes'
+  #ignore_errors: yes'
 
 - name: print
   debug:
