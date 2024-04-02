@@ -21,7 +21,8 @@
     login_user: root
     login_password: ExpenseApp@1 
     #"{{mysql_root_password}}"
-    login_host: mysql-dev.rdevops6a.online
+    login_host: localhost
+    #mysql-dev.rdevops6a.online
     filter: version
   register: mysql_connection_output
   ignore_errors: yes'
