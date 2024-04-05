@@ -7,7 +7,7 @@ pipelines:
 #    display_order: -1
     materials:
       git-96066a7:
-        git: https://github.com/chaitus09/learn-ansible.git
+        git: https://github.com/chaitus09/expense-ansible.git
         shallow_clone: false
         auto_update: true
         branch: main
